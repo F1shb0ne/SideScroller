@@ -24,11 +24,11 @@ def on_draw():
 
 @window.event
 def on_key_press(symbol, modifiers):
-    kbd.SetKey(symbol)    
+    kbd.SetKey(symbol)
 
 @window.event
 def on_key_release(symbol, modifiers):
-    kbd.ClearKey(symbol)    
+    kbd.ClearKey(symbol)
 
 # register game logic routine; 25 ticks per second
 pyglet.clock.schedule_interval(game.Tick, 0.04)
