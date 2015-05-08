@@ -1,0 +1,23 @@
+
+* Sprites : .spr files*
+A Sprite file contains all the data concerning an actor which will include:
+    - animation definitions
+    - a url to one or more PNG image files containing animation sequences
+    - the metadata concerning the frames inside the image file:
+        - bounding box of actor frame
+        - relative positions of each frame and frame id
+        - center position
+
+* Actors : .act files *
+Actors are entities in the game that use sprite files and are one of three types:
+    - The player
+    - An NPC (villager, animal, monster, etc)
+    - Object (anything other than a player / npc)
+
+* Maps : .map files *
+A map is a text file that describes an area of space where actors may exist
+    - file url to an image of the actual map players will see
+    - file url to an image of the black/white collision information
+    - portals which point to other portals in the same or different maps
+    - a starting template of actors and their starting conditions
+    - a list of actors that is saved when the map is exited, and used when loaded

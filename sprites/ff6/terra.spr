@@ -1,0 +1,41 @@
+version sprite 1
+
+animation walk_down
+url ff6/terra
+dimensions 30 48
+center 14 47
+frame 80 0 5 n
+frame 0 0 5 n
+frame 40 0 5 n
+frame 0 0 5 n
+end_animation
+
+animation walk_up
+url ff6/terra
+dimensions 30 48
+center 14 47
+frame 40 120 5 n
+frame 0 120 5 n
+frame 40 120 5 h
+frame 0 120 5 n
+end_animation
+
+animation walk_left
+url ff6/terra
+dimensions 30 48
+center 14 47
+frame 40 60 5 n
+frame 0 60 5 n
+frame 80 60 5 n
+frame 0 60 5 n
+end_animation
+
+animation walk_right
+url ff6/terra
+dimensions 30 48
+center 14 47
+frame 40 60 5 h
+frame 0 60 5 h
+frame 80 60 5 h
+frame 0 60 5 h
+end_animation
