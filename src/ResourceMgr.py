@@ -12,6 +12,7 @@ def load_sprite(filename):
 
     # Contents of each AnimationRef object
     animation_name = None
+    owner = None
     file_url = None
     frame_width = None
     frame_height = None
@@ -30,6 +31,7 @@ def load_sprite(filename):
 
             # Before moving on to the next line, do we have enough data to make up an AnimationRef object?
             if (animation_name is not None and
+                    owner is not None and
                     file_url is not None and
                     frame_width is not None and
                     frame_height is not None and
@@ -39,6 +41,7 @@ def load_sprite(filename):
 
                 # Store complete object
                 sprites.append(src.res.Sprite.AnimationRef(animation_name,
+                                                           owner,
                                                            file_url,
                                                            frame_width,
                                                            frame_height,
@@ -50,6 +53,7 @@ def load_sprite(filename):
 
                 # Reset and move on
                 animation_name = None
+                owner = None
                 file_url = None
                 frame_width = None
                 frame_height = None
@@ -78,6 +82,10 @@ def load_sprite(filename):
                     continue
 
                 if inside_anim_def:
+                    if tokens[0] == 'owner':
+                        owner = tokens[1]
+                        continue
+
                     if tokens[0] == 'url':
                         file_url = tokens[1]
                         continue

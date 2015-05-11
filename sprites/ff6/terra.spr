@@ -1,6 +1,7 @@
 version sprite 1
 
 animation walk_down
+owner terra
 url ff6/terra
 dimensions 30 48
 center 14 47
@@ -11,6 +12,7 @@ frame 0 0 5 n
 end_animation
 
 animation walk_up
+owner terra
 url ff6/terra
 dimensions 30 48
 center 14 47
@@ -21,6 +23,7 @@ frame 0 120 5 n
 end_animation
 
 animation walk_left
+owner terra
 url ff6/terra
 dimensions 30 48
 center 14 47
@@ -31,6 +34,7 @@ frame 0 60 5 n
 end_animation
 
 animation walk_right
+owner terra
 url ff6/terra
 dimensions 30 48
 center 14 47

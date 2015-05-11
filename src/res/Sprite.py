@@ -16,9 +16,10 @@ but point to different AnimationRef objects for their own sprite image data.
 
 
 class AnimationRef:
-    def __init__(self, name, url, frame_width, frame_height, center_x, center_y, frames):
+    def __init__(self, name, owner, url, frame_width, frame_height, center_x, center_y, frames):
 
         self.name = name
+        self.owner = owner
         self.url = url
         self.frame_width = frame_width
         self.frame_height = frame_height
