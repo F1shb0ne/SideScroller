@@ -38,8 +38,8 @@ Contains the frame position in an image for a specific frame in an object's anim
 class AnimationFrame:
 
     def __init__(self, offset_x, offset_y, frame_delay, flip):
-        self.offset_x = offset_x
-        self.offset_y = offset_y
+        self.offset_x = int(offset_x)
+        self.offset_y = int(offset_y)
         self.frame_delay = int(frame_delay)
 
         self.flip_vert = False
