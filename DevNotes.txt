@@ -1,3 +1,4 @@
+(Needs updating)
 
 * Sprites : .spr files*
 A Sprite file contains all the data concerning an actor which will include:
@@ -7,12 +8,6 @@ A Sprite file contains all the data concerning an actor which will include:
         - bounding box of actor frame
         - relative positions of each frame and frame id
         - center position
-
-* Actors : .act files *
-Actors are entities in the game that use sprite files and are one of three types:
-    - The player
-    - An NPC (villager, animal, monster, etc)
-    - Object (anything other than a player / npc)
 
 * Maps : .map files *
 A map is a text file that describes an area of space where actors may exist

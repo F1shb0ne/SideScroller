@@ -1,36 +1,44 @@
+# Main script for testing (dont count on it working)
 
 import src.res.Sprite
 import src.ResourceMgr
 
-sprite_terra = src.ResourceMgr.load_sprite('ff6/terra')
+import sys
+import pygame
+import pygame.locals
+from time import *
 
-print "Terra has " + str(len(sprite_terra)) + " animations in her sprite file."
+import src.actor.NPC
 
+# Instantiate the only and only Game Resource object
+GRes = src.ResourceMgr.GameResources()
 
-"""
-def load_tile_table(filename, width, height):
-    image = pygame.image.load(filename).convert()
-    image_width, image_height = image.get_size()
-    tile_table = []
+pygame.init()
+pygame.display.set_caption("Side-Scroller Demo")
+screen = pygame.display.set_mode((512, 512))
 
-    for tile_x in range(0, image_width / width):
-        line = []
-        tile_table.append(line)
-        for tile_y in range(0, image_height/height):
-            rect = (tile_x * width, tile_y * height, width, height)
-            line.append(image.subsurface(rect))
-    return tile_table
+terra = src.actor.NPC.Ally("terra", 50, 50)
 
-if __name__ == '__main__':
-    pygame.init()
-    screen = pygame.display.set_mode((128, 98))
+while True:
+
     screen.fill((255, 255, 255))
-    table = load_tile_table("gfx/tile-map.png", 24, 16)
-    for x, row in enumerate(table):
-        for y, tile in enumerate(row):
-            screen.blit(tile, (x * 32, y * 24))
-    pygame.display.flip()
+
+    # screen.blit(GRes.frame["terra:walk_right:1"], (0 + x, 100))
+
+    sleep(.03125)  # 32 fps
+
+    # x += 1
+
+    # pygame.display.flip()
+    pygame.display.update()
+
+    for event in pygame.event.get():
+        if event.type == pygame.locals.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    """
     while pygame.event.wait().type != pygame.locals.QUIT:
         pass
 
-"""
+    """
